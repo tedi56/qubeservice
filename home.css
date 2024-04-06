@@ -160,3 +160,37 @@ img:not(#menuIcon) {
 .social-links img:hover {
     transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+    #menuIcon {
+        width: 20px; /* Smaller icon for smaller screens */
+        height: 20px;
+    }
+
+    .menuBox {
+        height: 50px; /* Less height for the menu */
+        padding-left: 60px; /* Adjust based on smaller screen */
+    }
+
+    h1 {
+        margin-top: 100px; /* Adjust heading position */
+        font-size: 30px; /* Smaller font size for heading */
+    }
+
+    .intructionBox {
+        width: 90%; /* Make instruction box take more screen width */
+        height: auto; /* Auto height for flexibility */
+        padding: 20px; /* Add padding for content inside */
+    }
+
+    .information-section {
+        padding: 20px; /* Adjust padding */
+    }
+}
+
+/* Adjustments for tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .intructionBox {
+        width: 70%; /* Slightly larger than on phones, but smaller than on desktop */
+    }
+}

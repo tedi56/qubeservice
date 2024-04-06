@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #4dacff;
+    font-weight: 900;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#menuIcon {
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+    transition: transform 0.5s ease;
+}
+
+#menuIcon:hover {
+    transform: rotate(90deg);
+}
+
+.menuBox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: rgba(243, 243, 243, 0.95);
+    z-index: 2;
+    padding-left: 80px;
+    justify-content: start;
+    align-items: center;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+
+.menuBox > div, .menuBox > img {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 375px;
+    font-size: 50px;
+    color: #fff;
+}
+
+img:not(#menuIcon) {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 5px;
+    right: 0;
+}
+
+.menuBox > div {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menuBox > div:hover {
+    transform: scale(1.1);
+}
+
+.scroll-extension {
+    margin-top: 390px;
+    height: 820px; 
+    background-color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.intructionBox.hidden {
+    display: none;
+}
+
+
+.intructionBox {
+    background-color: rgb(223, 223, 223);
+    width: 800px;
+    height: 400px;
+    transition: opacity 1s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.intructionBox.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.information-section {
+    background-color: #4dacff; /* Same as the page's main background */
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.company-info h2, .company-info p {
+    margin: 20px 0;
+}
+
+.social-links img {
+    margin: 10px;
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
